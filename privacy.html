@@ -5,27 +5,92 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Cute Count Down — Privacy Policy</title>
 <style>
-  :root { --pink:#FF6B9D; --orange:#FF8E53; }
+  :root {
+    --paper:#FAF8F3;
+    --ink:#1C1C1E;
+    --muted:#8A8378;
+    --flamingo:#E83E72;
+    --hairline:rgba(0,0,0,0.14);
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
   * { box-sizing: border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-         color:#1c1c1e; background:#f7f7f8; line-height:1.65; }
-  .hero { background:linear-gradient(135deg,var(--pink),var(--orange)); color:#fff; padding:56px 24px; text-align:center; }
-  .hero h1 { margin:0; font-size:1.9rem; font-weight:800; }
-  main { max-width:680px; margin:0 auto; padding:32px 24px 64px; }
-  section { background:#fff; border-radius:16px; padding:24px 28px; margin:20px 0; box-shadow:0 2px 12px rgba(0,0,0,.05); }
-  h2 { font-size:1.2rem; }
-  a { color:var(--pink); font-weight:600; text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .updated { color:#8e8e93; font-size:.9rem; }
-  footer { text-align:center; color:#8e8e93; font-size:.85rem; padding:24px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:0 28px; }
+
+  header.masthead { padding:64px 0 0; }
+  .eyebrow {
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  h1.title {
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(2.2rem, 7vw, 3.2rem);
+    line-height:1.04;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+  .rule-heavy { border:0; border-top:2px solid var(--ink); margin:0; }
+  .updated { color:var(--muted); font-size:0.86rem; margin:22px 0 0; }
+
+  section { padding:44px 0 52px; }
+  .lede { font-family:var(--serif); font-size:1.25rem; line-height:1.5; margin:0 0 32px; }
+  h2 {
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:1.3rem;
+    margin:34px 0 10px;
+    letter-spacing:-0.01em;
+  }
+  p { margin:0 0 14px; }
+
+  a {
+    color:var(--flamingo);
+    text-decoration:none;
+    border-bottom:1px solid rgba(232,62,114,0.35);
+    padding-bottom:1px;
+  }
+  a:hover { border-bottom-color:var(--flamingo); }
+
+  footer {
+    border-top:1px solid var(--hairline);
+    padding:30px 0 56px;
+    color:var(--muted);
+    font-size:0.84rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  footer a { color:var(--muted); border-bottom-color:var(--hairline); }
+  footer a:hover { color:var(--ink); border-bottom-color:var(--ink); }
 </style>
 </head>
 <body>
-  <div class="hero"><h1>Privacy Policy</h1></div>
-  <main>
-    <section>
+  <div class="wrap">
+    <header class="masthead">
+      <p class="eyebrow">Cute Count Down</p>
+      <h1 class="title">Privacy Policy</h1>
+      <hr class="rule-heavy">
       <p class="updated">Last updated: June 19, 2026</p>
-      <p><b>Cute Count Down does not collect any data.</b> We built it to be completely private.</p>
+    </header>
+
+    <section>
+      <p class="lede"><b>Cute Count Down does not collect any data.</b> We built it to be completely private.</p>
 
       <h2>What we collect</h2>
       <p>Nothing. The app does not collect, store on our servers, transmit, sell, or share any
@@ -47,7 +112,11 @@
       <p>Questions about your privacy? Email
          <a href="mailto:decart83@gmail.com?subject=Cute%20Count%20Down%20Privacy">decart83@gmail.com</a>.</p>
     </section>
-  </main>
-  <footer>© 2026 Cute Count Down · <a href="index.html">Support</a></footer>
+
+    <footer>
+      <span>© 2026 Cute Count Down</span>
+      <span><a href="index.html">Support</a></span>
+    </footer>
+  </div>
 </body>
 </html>

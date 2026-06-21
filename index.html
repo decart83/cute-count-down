@@ -3,50 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cute Count Down — Support</title>
+<title>Cute Count Down — Countdowns for every moment worth waiting for</title>
 <style>
-  :root { --pink:#FF6B9D; --orange:#FF8E53; }
+  :root {
+    --paper:#FAF8F3;
+    --ink:#1C1C1E;
+    --muted:#8A8378;
+    --flamingo:#E83E72;
+    --hairline:rgba(0,0,0,0.14);
+    --serif: Georgia, "Iowan Old Style", "Times New Roman", serif;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
   * { box-sizing: border-box; }
-  body { margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
-         color:#1c1c1e; background:#f7f7f8; line-height:1.6; }
-  .hero { background:linear-gradient(135deg,var(--pink),var(--orange)); color:#fff; padding:64px 24px 56px; text-align:center; }
-  .hero h1 { margin:0 0 8px; font-size:2.2rem; font-weight:800; }
-  .hero p { margin:0; opacity:.95; font-size:1.1rem; }
-  main { max-width:680px; margin:0 auto; padding:32px 24px 64px; }
-  section { background:#fff; border-radius:16px; padding:24px 28px; margin:20px 0; box-shadow:0 2px 12px rgba(0,0,0,.05); }
-  h2 { margin-top:0; font-size:1.3rem; }
-  a { color:var(--pink); font-weight:600; text-decoration:none; }
-  a:hover { text-decoration:underline; }
-  .faq h3 { margin:18px 0 4px; font-size:1.02rem; }
-  footer { text-align:center; color:#8e8e93; font-size:.85rem; padding:24px; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap { max-width:680px; margin:0 auto; padding:0 28px; }
+
+  /* Masthead */
+  header.masthead { padding:64px 0 0; }
+  .eyebrow {
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color:var(--muted);
+    margin:0 0 14px;
+  }
+  h1.title {
+    font-family:var(--serif);
+    font-style:italic;
+    font-weight:400;
+    font-size:clamp(2.6rem, 9vw, 4rem);
+    line-height:1.02;
+    letter-spacing:-0.01em;
+    margin:0 0 22px;
+  }
+  .rule-heavy { border:0; border-top:2px solid var(--ink); margin:0; }
+  .rule { border:0; border-top:1px solid var(--hairline); margin:0; }
+
+  .tagline {
+    font-family:var(--serif);
+    font-size:clamp(1.25rem, 3.6vw, 1.6rem);
+    line-height:1.4;
+    color:var(--ink);
+    margin:28px 0 0;
+    max-width:30ch;
+  }
+  .coming {
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:0.14em;
+    font-size:0.74rem;
+    color:var(--flamingo);
+    font-weight:600;
+    margin:22px 0 0;
+  }
+
+  /* Sections */
+  section { padding:52px 0; }
+  .section-label {
+    font-family:var(--sans);
+    text-transform:uppercase;
+    letter-spacing:0.18em;
+    font-size:0.72rem;
+    color:var(--muted);
+    margin:0 0 4px;
+  }
+  h2 {
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:clamp(1.5rem, 4.5vw, 1.9rem);
+    margin:18px 0 28px;
+    letter-spacing:-0.01em;
+  }
+
+  /* Features */
+  .feature {
+    padding:22px 0;
+    border-top:1px solid var(--hairline);
+  }
+  .feature:first-of-type { border-top:0; padding-top:0; }
+  .feature h3 {
+    font-family:var(--serif);
+    font-weight:400;
+    font-size:1.18rem;
+    margin:0 0 6px;
+  }
+  .feature p {
+    margin:0;
+    color:var(--muted);
+    font-size:0.98rem;
+  }
+
+  /* Support */
+  .support p { margin:0 0 16px; }
+  a {
+    color:var(--flamingo);
+    text-decoration:none;
+    border-bottom:1px solid rgba(232,62,114,0.35);
+    padding-bottom:1px;
+  }
+  a:hover { border-bottom-color:var(--flamingo); }
+  .lede { font-family:var(--serif); font-size:1.15rem; line-height:1.55; color:var(--ink); }
+
+  footer {
+    border-top:1px solid var(--hairline);
+    padding:30px 0 56px;
+    color:var(--muted);
+    font-size:0.84rem;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  footer a { color:var(--muted); border-bottom-color:var(--hairline); }
+  footer a:hover { color:var(--ink); border-bottom-color:var(--ink); }
 </style>
 </head>
 <body>
-  <div class="hero">
-    <h1>✨ Cute Count Down</h1>
-    <p>Beautiful countdowns for every big moment</p>
-  </div>
-  <main>
+  <div class="wrap">
+    <header class="masthead">
+      <p class="eyebrow">For iPhone</p>
+      <h1 class="title">Cute Count Down</h1>
+      <hr class="rule-heavy">
+      <p class="tagline">Countdowns for every moment worth waiting for.</p>
+      <p class="coming">Coming soon to the App Store</p>
+    </header>
+
     <section>
-      <h2>Support</h2>
-      <p>Need help, found a bug, or have a feature idea? We'd love to hear from you.</p>
-      <p>📧 <a href="mailto:decart83@gmail.com?subject=Cute%20Count%20Down%20Support">decart83@gmail.com</a></p>
-      <p>We typically reply within a couple of days.</p>
+      <p class="section-label">Features</p>
+      <h2>Made for the moments that matter.</h2>
+
+      <div class="feature">
+        <h3>Countdowns, your way</h3>
+        <p>Adjust the detail to taste — count down in days, days &amp; hours, or a full live h:m:s timer.</p>
+      </div>
+      <div class="feature">
+        <h3>Home &amp; Lock Screen widgets</h3>
+        <p>Put a countdown right where you'll see it, and pick exactly which one each widget shows.</p>
+      </div>
+      <div class="feature">
+        <h3>Live ticking timers</h3>
+        <p>Watch the seconds fall away in real time as the big day draws closer.</p>
+      </div>
+      <div class="feature">
+        <h3>A celebration when it arrives</h3>
+        <p>When the day finally comes, a burst of confetti and a shareable card mark the moment.</p>
+      </div>
+      <div class="feature">
+        <h3>100% private</h3>
+        <p>Everything stays on your device. No account, no tracking, no ads — ever.</p>
+      </div>
     </section>
-    <section class="faq">
-      <h2>Frequently asked questions</h2>
-      <h3>How do I add a widget?</h3>
-      <p>Long-press your Home Screen → tap <b>+</b> → search “Cute Countdown” → choose the
-         <b>Countdown</b>, <b>All Countdowns</b>, or <b>Add Countdown</b> widget.</p>
-      <h3>How do I choose which countdown a widget shows?</h3>
-      <p>Long-press the <b>Countdown</b> widget → <b>Edit Widget</b> → pick the countdown you want.</p>
-      <h3>How do I change how much detail a countdown shows?</h3>
-      <p>When adding or editing a countdown, use the <b>Detail</b> option to pick days only,
-         days &amp; hours, or a full live timer.</p>
-      <h3>Is my data private?</h3>
-      <p>Yes. Everything stays on your device — see our <a href="privacy.html">Privacy Policy</a>.</p>
+
+    <hr class="rule">
+
+    <section class="support">
+      <p class="section-label">Support</p>
+      <h2>We'd love to hear from you.</h2>
+      <p class="lede">Need help, found a bug, or have a feature idea? A real person reads every message.</p>
+      <p>Email <a href="mailto:decart83@gmail.com?subject=Cute%20Count%20Down%20Support">decart83@gmail.com</a> — we typically reply within a couple of days.</p>
+      <p>Curious how we handle your data? Read the <a href="privacy.html">Privacy Policy</a>.</p>
     </section>
-  </main>
-  <footer>© 2026 Cute Count Down · <a href="privacy.html">Privacy Policy</a></footer>
+
+    <footer>
+      <span>© 2026 Cute Count Down</span>
+      <span><a href="privacy.html">Privacy Policy</a></span>
+    </footer>
+  </div>
 </body>
 </html>
